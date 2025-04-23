@@ -65,7 +65,7 @@ app.post('/getResponse', async (req, res) => {
   }
 });
 
-app.get('*', (req, res) => {
+app.get('', (req, res) => {
   res.status(404).json({
     msg: "bad request"
   });
