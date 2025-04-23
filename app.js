@@ -65,4 +65,10 @@ app.post('/getResponse', async (req, res) => {
   }
 });
 
+app.use('*',()=>{
+  res.status(404).json({
+    msg:"bad request"
+  })
+})
+
 export default app;
