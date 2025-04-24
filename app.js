@@ -45,9 +45,11 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import { GoogleGenerativeAI } from '@google/generative-ai';
+import cors from 'cors'
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors())
 
 const ai = new GoogleGenerativeAI('AIzaSyByztXojXXFAf5A13X5U7uhf47hiBwTLMA');
 
